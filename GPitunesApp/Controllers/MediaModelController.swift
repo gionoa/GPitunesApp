@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ModelController {
+class MediaModelController {
     
     private var dataSource = [MediaType: [MediaItem]]()
     

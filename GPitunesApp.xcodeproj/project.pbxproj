@@ -9,14 +9,13 @@
 /* Begin PBXBuildFile section */
 		075CAFCDE833773C345510FC /* Pods_GPitunesApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72CCD98B36C707598FC29B9D /* Pods_GPitunesApp.framework */; };
 		BFE89E66222C67C5004340CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE89E65222C67C5004340CD /* AppDelegate.swift */; };
-		BFE89E68222C67C5004340CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE89E67222C67C5004340CD /* ViewController.swift */; };
-		BFE89E6B222C67C5004340CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFE89E69222C67C5004340CD /* Main.storyboard */; };
+		BFE89E68222C67C5004340CD /* MediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE89E67222C67C5004340CD /* MediaViewController.swift */; };
 		BFE89E6D222C67C6004340CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFE89E6C222C67C6004340CD /* Assets.xcassets */; };
 		BFE89E70222C67C6004340CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFE89E6E222C67C6004340CD /* LaunchScreen.storyboard */; };
 		BFE89E79222C7236004340CD /* iTunesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE89E78222C7236004340CD /* iTunesAPI.swift */; };
 		BFE89E7C222C737C004340CD /* MediaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE89E7B222C737C004340CD /* MediaItem.swift */; };
 		BFE89E7E222C7382004340CD /* MediaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE89E7D222C7382004340CD /* MediaType.swift */; };
-		BFE89E80222C78CE004340CD /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE89E7F222C78CE004340CD /* ModelController.swift */; };
+		BFE89E80222C78CE004340CD /* MediaModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE89E7F222C78CE004340CD /* MediaModelController.swift */; };
 		BFE89E82222C7C45004340CD /* MediaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE89E81222C7C45004340CD /* MediaTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -24,15 +23,14 @@
 		72CCD98B36C707598FC29B9D /* Pods_GPitunesApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GPitunesApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFE89E62222C67C5004340CD /* GPitunesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPitunesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFE89E65222C67C5004340CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BFE89E67222C67C5004340CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BFE89E6A222C67C5004340CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BFE89E67222C67C5004340CD /* MediaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaViewController.swift; sourceTree = "<group>"; };
 		BFE89E6C222C67C6004340CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFE89E6F222C67C6004340CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFE89E71222C67C6004340CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFE89E78222C7236004340CD /* iTunesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesAPI.swift; sourceTree = "<group>"; };
 		BFE89E7B222C737C004340CD /* MediaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItem.swift; sourceTree = "<group>"; };
 		BFE89E7D222C7382004340CD /* MediaType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaType.swift; sourceTree = "<group>"; };
-		BFE89E7F222C78CE004340CD /* ModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
+		BFE89E7F222C78CE004340CD /* MediaModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaModelController.swift; sourceTree = "<group>"; };
 		BFE89E81222C7C45004340CD /* MediaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaTableViewCell.swift; sourceTree = "<group>"; };
 		C97568532FB5195CF5A89998 /* Pods-GPitunesApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPitunesApp.release.xcconfig"; path = "Target Support Files/Pods-GPitunesApp/Pods-GPitunesApp.release.xcconfig"; sourceTree = "<group>"; };
 		ECEC5A4FF9067D9A29456A06 /* Pods-GPitunesApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPitunesApp.debug.xcconfig"; path = "Target Support Files/Pods-GPitunesApp/Pods-GPitunesApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -72,9 +70,10 @@
 			isa = PBXGroup;
 			children = (
 				BFE89E7A222C7367004340CD /* Models */,
+				BFE89E83222C9334004340CD /* Views */,
 				BFE89E77222C7166004340CD /* Controllers */,
+				BFE89E84222C93C6004340CD /* Network */,
 				BFE89E65222C67C5004340CD /* AppDelegate.swift */,
-				BFE89E69222C67C5004340CD /* Main.storyboard */,
 				BFE89E6C222C67C6004340CD /* Assets.xcassets */,
 				BFE89E6E222C67C6004340CD /* LaunchScreen.storyboard */,
 				BFE89E71222C67C6004340CD /* Info.plist */,
@@ -85,10 +84,8 @@
 		BFE89E77222C7166004340CD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				BFE89E67222C67C5004340CD /* ViewController.swift */,
-				BFE89E81222C7C45004340CD /* MediaTableViewCell.swift */,
-				BFE89E78222C7236004340CD /* iTunesAPI.swift */,
-				BFE89E7F222C78CE004340CD /* ModelController.swift */,
+				BFE89E67222C67C5004340CD /* MediaViewController.swift */,
+				BFE89E7F222C78CE004340CD /* MediaModelController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -100,6 +97,22 @@
 				BFE89E7D222C7382004340CD /* MediaType.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		BFE89E83222C9334004340CD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BFE89E81222C7C45004340CD /* MediaTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BFE89E84222C93C6004340CD /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BFE89E78222C7236004340CD /* iTunesAPI.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		D420F41EDCDCF776E1B50107 /* Pods */ = {
@@ -181,7 +194,6 @@
 			files = (
 				BFE89E70222C67C6004340CD /* LaunchScreen.storyboard in Resources */,
 				BFE89E6D222C67C6004340CD /* Assets.xcassets in Resources */,
-				BFE89E6B222C67C5004340CD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,9 +252,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFE89E7E222C7382004340CD /* MediaType.swift in Sources */,
-				BFE89E68222C67C5004340CD /* ViewController.swift in Sources */,
+				BFE89E68222C67C5004340CD /* MediaViewController.swift in Sources */,
 				BFE89E7C222C737C004340CD /* MediaItem.swift in Sources */,
-				BFE89E80222C78CE004340CD /* ModelController.swift in Sources */,
+				BFE89E80222C78CE004340CD /* MediaModelController.swift in Sources */,
 				BFE89E79222C7236004340CD /* iTunesAPI.swift in Sources */,
 				BFE89E82222C7C45004340CD /* MediaTableViewCell.swift in Sources */,
 				BFE89E66222C67C5004340CD /* AppDelegate.swift in Sources */,
@@ -252,14 +264,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		BFE89E69222C67C5004340CD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BFE89E6A222C67C5004340CD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BFE89E6E222C67C6004340CD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

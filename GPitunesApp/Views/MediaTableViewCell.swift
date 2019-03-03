@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import SDWebImage
 
 class MediaTableViewCell: UITableViewCell {
+    
     static let reuseID = String(describing: MediaTableViewCell.self)
 
     override func awakeFromNib() {

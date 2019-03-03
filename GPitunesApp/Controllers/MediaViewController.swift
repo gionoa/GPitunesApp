@@ -7,11 +7,10 @@
 //
 
 import UIKit
-import SDWebImage
 
-class ViewController: UIViewController {
+class MediaViewController: UIViewController {
     
-    var modelController = ModelController()
+    var modelController = MediaModelController()
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -30,15 +29,43 @@ class ViewController: UIViewController {
         return segmentedControl
     }()
 
+    var selectedMediaType: MediaType? {
+        return MediaType.index(at: segmentedControl.selectedSegmentIndex)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        setupUI()
     }
-
-
+    
+    func setupUI() {
+        navigationItem.titleView = segmentedControl
+        
+        view.addSubview(tableView)
+        
+        view.addConstraints([
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            ])
+    }
+    
+    @objc func indexChanged(sender: UISegmentedControl) {
+        fetchData(mediaIndex: sender.selectedSegmentIndex)
+    }
+    
+    func fetchData(mediaIndex: Int) {
+        guard let mediaType = MediaType.index(at: mediaIndex) else { return }
+        
+        modelController.fetchData(mediaType: mediaType) { (error) in
+            
+        }
+    }
 }
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension MediaViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 0
     }
