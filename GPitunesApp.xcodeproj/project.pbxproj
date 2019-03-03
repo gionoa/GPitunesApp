@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		075CAFCDE833773C345510FC /* Pods_GPitunesApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72CCD98B36C707598FC29B9D /* Pods_GPitunesApp.framework */; };
 		BFE89E66222C67C5004340CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE89E65222C67C5004340CD /* AppDelegate.swift */; };
 		BFE89E68222C67C5004340CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE89E67222C67C5004340CD /* ViewController.swift */; };
 		BFE89E6B222C67C5004340CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFE89E69222C67C5004340CD /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		72CCD98B36C707598FC29B9D /* Pods_GPitunesApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GPitunesApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFE89E62222C67C5004340CD /* GPitunesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPitunesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFE89E65222C67C5004340CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFE89E67222C67C5004340CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		BFE89E6C222C67C6004340CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFE89E6F222C67C6004340CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFE89E71222C67C6004340CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C97568532FB5195CF5A89998 /* Pods-GPitunesApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPitunesApp.release.xcconfig"; path = "Target Support Files/Pods-GPitunesApp/Pods-GPitunesApp.release.xcconfig"; sourceTree = "<group>"; };
+		ECEC5A4FF9067D9A29456A06 /* Pods-GPitunesApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPitunesApp.debug.xcconfig"; path = "Target Support Files/Pods-GPitunesApp/Pods-GPitunesApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				075CAFCDE833773C345510FC /* Pods_GPitunesApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				BFE89E64222C67C5004340CD /* GPitunesApp */,
 				BFE89E63222C67C5004340CD /* Products */,
+				D420F41EDCDCF776E1B50107 /* Pods */,
+				F91D021FBC5DBA4D0CDDD348 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,24 @@
 			path = GPitunesApp;
 			sourceTree = "<group>";
 		};
+		D420F41EDCDCF776E1B50107 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ECEC5A4FF9067D9A29456A06 /* Pods-GPitunesApp.debug.xcconfig */,
+				C97568532FB5195CF5A89998 /* Pods-GPitunesApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F91D021FBC5DBA4D0CDDD348 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				72CCD98B36C707598FC29B9D /* Pods_GPitunesApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +96,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BFE89E74222C67C6004340CD /* Build configuration list for PBXNativeTarget "GPitunesApp" */;
 			buildPhases = (
+				7D36B74D750B064D787EA948 /* [CP] Check Pods Manifest.lock */,
 				BFE89E5E222C67C5004340CD /* Sources */,
 				BFE89E5F222C67C5004340CD /* Frameworks */,
 				BFE89E60222C67C5004340CD /* Resources */,
+				02908301342CDEA19BF4C40A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		02908301342CDEA19BF4C40A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GPitunesApp/Pods-GPitunesApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GPitunesApp/Pods-GPitunesApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D36B74D750B064D787EA948 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GPitunesApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BFE89E5E222C67C5004340CD /* Sources */ = {
@@ -280,6 +354,7 @@
 		};
 		BFE89E75222C67C6004340CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECEC5A4FF9067D9A29456A06 /* Pods-GPitunesApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +372,7 @@
 		};
 		BFE89E76222C67C6004340CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C97568532FB5195CF5A89998 /* Pods-GPitunesApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
