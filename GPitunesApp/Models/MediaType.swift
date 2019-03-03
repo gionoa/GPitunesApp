@@ -20,4 +20,19 @@ enum MediaType: String {
         case .tvShows: return "tv-shows/top-tv-episodes"
         }
     }
+    
+    static var allTypes: [String] {
+        return [MediaType.movies.rawValue,
+                MediaType.music.rawValue,
+                MediaType.tvShows.rawValue]
+    }
+    
+    static func index(at index: Int) -> MediaType? {
+        switch index {
+        case 0: return .movies
+        case 1: return .music
+        case 2: return .tvShows
+        default: return nil
+        }
+    }
 }

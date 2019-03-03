@@ -16,6 +16,8 @@
 		BFE89E79222C7236004340CD /* iTunesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE89E78222C7236004340CD /* iTunesAPI.swift */; };
 		BFE89E7C222C737C004340CD /* MediaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE89E7B222C737C004340CD /* MediaItem.swift */; };
 		BFE89E7E222C7382004340CD /* MediaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE89E7D222C7382004340CD /* MediaType.swift */; };
+		BFE89E80222C78CE004340CD /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE89E7F222C78CE004340CD /* ModelController.swift */; };
+		BFE89E82222C7C45004340CD /* MediaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE89E81222C7C45004340CD /* MediaTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		BFE89E78222C7236004340CD /* iTunesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesAPI.swift; sourceTree = "<group>"; };
 		BFE89E7B222C737C004340CD /* MediaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItem.swift; sourceTree = "<group>"; };
 		BFE89E7D222C7382004340CD /* MediaType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaType.swift; sourceTree = "<group>"; };
+		BFE89E7F222C78CE004340CD /* ModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
+		BFE89E81222C7C45004340CD /* MediaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaTableViewCell.swift; sourceTree = "<group>"; };
 		C97568532FB5195CF5A89998 /* Pods-GPitunesApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPitunesApp.release.xcconfig"; path = "Target Support Files/Pods-GPitunesApp/Pods-GPitunesApp.release.xcconfig"; sourceTree = "<group>"; };
 		ECEC5A4FF9067D9A29456A06 /* Pods-GPitunesApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPitunesApp.debug.xcconfig"; path = "Target Support Files/Pods-GPitunesApp/Pods-GPitunesApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,7 +86,9 @@
 			isa = PBXGroup;
 			children = (
 				BFE89E67222C67C5004340CD /* ViewController.swift */,
+				BFE89E81222C7C45004340CD /* MediaTableViewCell.swift */,
 				BFE89E78222C7236004340CD /* iTunesAPI.swift */,
+				BFE89E7F222C78CE004340CD /* ModelController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -236,7 +242,9 @@
 				BFE89E7E222C7382004340CD /* MediaType.swift in Sources */,
 				BFE89E68222C67C5004340CD /* ViewController.swift in Sources */,
 				BFE89E7C222C737C004340CD /* MediaItem.swift in Sources */,
+				BFE89E80222C78CE004340CD /* ModelController.swift in Sources */,
 				BFE89E79222C7236004340CD /* iTunesAPI.swift in Sources */,
+				BFE89E82222C7C45004340CD /* MediaTableViewCell.swift in Sources */,
 				BFE89E66222C67C5004340CD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
