@@ -15,6 +15,8 @@ class MediaViewController: UIViewController {
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 56
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(MediaTableViewCell.self, forCellReuseIdentifier: MediaTableViewCell.reuseID)
@@ -60,6 +62,11 @@ class MediaViewController: UIViewController {
     func fetchData(mediaType: Int) {
         guard let mediaType = MediaType.index(at: mediaType) else { return }
         
+        self.tableView.isUserInteractionEnabled = false
+        UIView.animate(withDuration: 0.3) {
+            self.tableView.alpha = 0.5
+        }
+        
         modelController.fetchData(mediaType: mediaType) { (error) in
             if let error = error {
                 let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
@@ -69,6 +76,11 @@ class MediaViewController: UIViewController {
             }
             
             DispatchQueue.main.async {
+                UIView.animate(withDuration: 0.3) {
+                    self.tableView.alpha = 1.0
+                }
+                
+                self.tableView.isUserInteractionEnabled = true
                 self.tableView.reloadSections(IndexSet(integer:0), with: .fade)
             }
         }
