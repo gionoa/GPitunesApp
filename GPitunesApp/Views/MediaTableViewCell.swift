@@ -91,5 +91,4 @@ class MediaTableViewCell: UITableViewCell {
         mediaImageView.image = nil
         mediaImageView.sd_cancelCurrentImageLoad()
     }
-    
 }

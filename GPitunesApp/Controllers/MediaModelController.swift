@@ -24,7 +24,7 @@ class MediaModelController {
         }
     }
     
-    func count(for mediaType: MediaType) -> Int { // not Int? because nil coalescing
+    func count(for mediaType: MediaType) -> Int { 
         return dataSource[mediaType]?.count ?? 0
     }
     
