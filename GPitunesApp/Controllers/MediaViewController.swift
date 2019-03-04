@@ -60,7 +60,16 @@ class MediaViewController: UIViewController {
         guard let mediaType = MediaType.index(at: mediaIndex) else { return }
         
         modelController.fetchData(mediaType: mediaType) { (error) in
+            if let error = error {
+                let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+                let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alert.addAction(action)
+                self.present(alert, animated: true)
+            }
             
+            DispatchQueue.main.async {
+                self.tableView.reloadSections(IndexSet(integer:0), with: .fade)
+            }
         }
     }
 }
