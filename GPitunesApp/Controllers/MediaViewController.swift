@@ -37,13 +37,14 @@ class MediaViewController: UIViewController {
         super.viewDidLoad()
         
         setupUI()
+        
+        fetchData(mediaType: segmentedControl.selectedSegmentIndex)
     }
     
     func setupUI() {
         navigationItem.titleView = segmentedControl
         
         view.addSubview(tableView)
-        
         view.addConstraints([
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
@@ -53,11 +54,11 @@ class MediaViewController: UIViewController {
     }
     
     @objc func indexChanged(sender: UISegmentedControl) {
-        fetchData(mediaIndex: sender.selectedSegmentIndex)
+        fetchData(mediaType: sender.selectedSegmentIndex)
     }
     
-    func fetchData(mediaIndex: Int) {
-        guard let mediaType = MediaType.index(at: mediaIndex) else { return }
+    func fetchData(mediaType: Int) {
+        guard let mediaType = MediaType.index(at: mediaType) else { return }
         
         modelController.fetchData(mediaType: mediaType) { (error) in
             if let error = error {
@@ -82,10 +83,11 @@ extension MediaViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: MediaTableViewCell.reuseID, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: MediaTableViewCell.reuseID, for: indexPath) as! MediaTableViewCell
         
         let item = modelController.index(mediaType: selectedMediaType, at: indexPath.row)
         cell.configure(item)
+        
         return cell
     }
 }

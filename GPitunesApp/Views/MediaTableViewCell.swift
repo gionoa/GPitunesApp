@@ -57,7 +57,12 @@ class MediaTableViewCell: UITableViewCell {
     }
     
     func setupUI() {
+        contentView.addSubview(mediaImageView)
+        contentView.addSubview(stackView)
         
+        contentView.addConstraints([
+            
+            ])
     }
     
     func configure(_ mediaItem: MediaItem?) {
