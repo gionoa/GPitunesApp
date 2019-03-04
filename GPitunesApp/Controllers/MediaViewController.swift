@@ -39,8 +39,7 @@ class MediaViewController: UIViewController {
         super.viewDidLoad()
         
         setupUI()
-        
-        fetchData(mediaType: segmentedControl.selectedSegmentIndex)
+        fetchData(index: segmentedControl.selectedSegmentIndex)
     }
     
     func setupUI() {
@@ -56,11 +55,11 @@ class MediaViewController: UIViewController {
     }
     
     @objc func indexChanged(sender: UISegmentedControl) {
-        fetchData(mediaType: sender.selectedSegmentIndex)
+        fetchData(index: sender.selectedSegmentIndex)
     }
     
-    func fetchData(mediaType: Int) {
-        guard let mediaType = MediaType.index(at: mediaType) else { return }
+    func fetchData(index: Int) {
+        guard let mediaType = MediaType.index(at: index) else { return }
         
         self.tableView.isUserInteractionEnabled = false
         UIView.animate(withDuration: 0.3) {
@@ -97,7 +96,7 @@ extension MediaViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MediaTableViewCell.reuseID, for: indexPath) as! MediaTableViewCell
         
-        let item = modelController.index(mediaType: selectedMediaType, at: indexPath.row)
+        let item = modelController.mediaItem(for: selectedMediaType, at: indexPath.row)
         cell.configure(item)
         
         return cell

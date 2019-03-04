@@ -28,7 +28,7 @@ class MediaModelController {
         return dataSource[mediaType]?.count ?? 0
     }
     
-    func index(mediaType: MediaType?, at index: Int) -> MediaItem? {
+    func mediaItem(for mediaType: MediaType?, at index: Int) -> MediaItem? {
         guard let mediaType = mediaType,
               let mediaArray = dataSource[mediaType],
               index < mediaArray.count else {

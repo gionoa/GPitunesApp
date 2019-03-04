@@ -42,6 +42,7 @@ struct iTunesAPI {
                 })
                 
                 completion(mediaItems, error)
+                
             } catch let decodingError {
                 completion([], decodingError)
             }
