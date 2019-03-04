@@ -60,8 +60,16 @@ class MediaTableViewCell: UITableViewCell {
         contentView.addSubview(mediaImageView)
         contentView.addSubview(stackView)
         
+        let inset: CGFloat = 16.0
         contentView.addConstraints([
-            
+            mediaImageView.heightAnchor.constraint(equalTo: contentView.heightAnchor),
+            mediaImageView.widthAnchor.constraint(equalToConstant: 64.0),
+            mediaImageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            mediaImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            stackView.leadingAnchor.constraint(equalTo: mediaImageView.trailingAnchor, constant: (inset - 4)),
+            stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -inset),
+            stackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: inset),
+            stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -inset)
             ])
     }
     
