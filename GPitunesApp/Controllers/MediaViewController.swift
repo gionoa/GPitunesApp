@@ -76,12 +76,16 @@ class MediaViewController: UIViewController {
 
 extension MediaViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        guard let mediaType = selectedMediaType else { return 0 }
+        
+        return modelController.count(for: mediaType)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MediaTableViewCell.reuseID, for: indexPath)
         
+        let item = modelController.index(mediaType: selectedMediaType, at: indexPath.row)
+        cell.configure(item)
         return cell
     }
 }

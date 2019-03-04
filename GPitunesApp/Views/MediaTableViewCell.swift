@@ -49,6 +49,7 @@ class MediaTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
+        setupUI()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -57,6 +58,25 @@ class MediaTableViewCell: UITableViewCell {
     
     func setupUI() {
         
+    }
+    
+    func configure(_ mediaItem: MediaItem?) {
+        guard let mediaItem = mediaItem else { return }
+        
+        let url = URL(string: mediaItem.imageURL)
+        mediaImageView.sd_setImage(with: url)
+        
+        titleLabel.text = mediaItem.title
+        mediaTypeLabel.text = mediaItem.mediaType.rawValue
+        
+        contentView.layoutIfNeeded()
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        mediaImageView.image = nil
+        mediaImageView.sd_cancelCurrentImageLoad()
     }
     
 }
