@@ -59,7 +59,7 @@ class MediaViewController: UIViewController {
     }
     
     func fetchData(index: Int) {
-        guard let mediaType = MediaType.index(at: index) else { return }
+        guard let mediaType = selectedMediaType else { return }
         
         self.tableView.isUserInteractionEnabled = false
         UIView.animate(withDuration: 0.3) {
