@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		075CAFCDE833773C345510FC /* Pods_GPitunesApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72CCD98B36C707598FC29B9D /* Pods_GPitunesApp.framework */; };
+		BF1FFCD62234B3DF007DE79F /* MediaDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1FFCD52234B3DF007DE79F /* MediaDetailViewController.swift */; };
 		BFE89E66222C67C5004340CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE89E65222C67C5004340CD /* AppDelegate.swift */; };
 		BFE89E68222C67C5004340CD /* MediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE89E67222C67C5004340CD /* MediaViewController.swift */; };
 		BFE89E6D222C67C6004340CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFE89E6C222C67C6004340CD /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		72CCD98B36C707598FC29B9D /* Pods_GPitunesApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GPitunesApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF1FFCD52234B3DF007DE79F /* MediaDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetailViewController.swift; sourceTree = "<group>"; };
 		BFE89E62222C67C5004340CD /* GPitunesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPitunesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFE89E65222C67C5004340CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFE89E67222C67C5004340CD /* MediaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 			children = (
 				BFE89E67222C67C5004340CD /* MediaViewController.swift */,
 				BFE89E7F222C78CE004340CD /* MediaModelController.swift */,
+				BF1FFCD52234B3DF007DE79F /* MediaDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				BFE89E68222C67C5004340CD /* MediaViewController.swift in Sources */,
 				BFE89E7C222C737C004340CD /* MediaItem.swift in Sources */,
 				BFE89E80222C78CE004340CD /* MediaModelController.swift in Sources */,
+				BF1FFCD62234B3DF007DE79F /* MediaDetailViewController.swift in Sources */,
 				BFE89E79222C7236004340CD /* iTunesAPI.swift in Sources */,
 				BFE89E82222C7C45004340CD /* MediaTableViewCell.swift in Sources */,
 				BFE89E66222C67C5004340CD /* AppDelegate.swift in Sources */,

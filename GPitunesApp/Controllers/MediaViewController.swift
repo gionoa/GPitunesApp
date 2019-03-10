@@ -68,10 +68,7 @@ class MediaViewController: UIViewController {
         
         modelController.fetchData(mediaType: mediaType) { (error) in
             if let error = error {
-                let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
-                let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-                alert.addAction(action)
-                self.present(alert, animated: true)
+                self.presentError(error)
             }
             
             DispatchQueue.main.async {
@@ -83,6 +80,13 @@ class MediaViewController: UIViewController {
                 self.tableView.reloadSections(IndexSet(integer:0), with: .fade)
             }
         }
+    }
+    
+    func presentError(_ error: Error) {
+        let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(action)
+        self.present(alert, animated: true)
     }
 }
 
@@ -100,5 +104,16 @@ extension MediaViewController: UITableViewDelegate, UITableViewDataSource {
         cell.configure(item)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let mediaItem = modelController.mediaItem(for: selectedMediaType, at: indexPath.row),
+              let mediaImage = tableView.cellForRow(at: indexPath)?.imageView?.image else {
+            tableView.deselectRow(at: indexPath, animated: true)
+            return
+        }
+        
+        let detailViewController = MediaDetailViewController(mediaItem, mediaImage: mediaImage)
+        // present
     }
 }
