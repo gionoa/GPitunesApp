@@ -37,9 +37,7 @@ struct iTunesAPI {
                 
                 let welcomeData = try JSONDecoder().decode(Welcome.self, from: data)
                 
-                let mediaItems = welcomeData.feed.results.map({ (result) -> MediaItem in
-                    return MediaItem(title: result.name, imageURL: result.artworkUrl100, mediaType: mediaType)
-                })
+                let mediaItems = welcomeData.feed.results.map { MediaItem(title: $0.name, imageURL: $0.artworkUrl100, mediaType: mediaType) }
                 
                 completion(mediaItems, error)
                 
