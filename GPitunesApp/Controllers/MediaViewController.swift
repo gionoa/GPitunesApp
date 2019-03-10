@@ -27,7 +27,7 @@ class MediaViewController: UIViewController {
         let segmentedControl = UISegmentedControl(items: MediaType.allTypes)
         segmentedControl.translatesAutoresizingMaskIntoConstraints = false
         segmentedControl.selectedSegmentIndex = 0
-        segmentedControl.addTarget(self, action: #selector(indexChanged(sender:)), for: .valueChanged)
+        segmentedControl.addTarget(self, action: #selector(indexChanged), for: .valueChanged)
         return segmentedControl
     }()
 
@@ -39,7 +39,7 @@ class MediaViewController: UIViewController {
         super.viewDidLoad()
         
         setupUI()
-        fetchData(index: segmentedControl.selectedSegmentIndex)
+        fetchData()
     }
     
     func setupUI() {
@@ -54,11 +54,11 @@ class MediaViewController: UIViewController {
             ])
     }
     
-    @objc func indexChanged(sender: UISegmentedControl) {
-        fetchData(index: sender.selectedSegmentIndex)
+    @objc func indexChanged() {
+        fetchData()
     }
     
-    func fetchData(index: Int) {
+    func fetchData() {
         guard let mediaType = selectedMediaType else { return }
         
         self.tableView.isUserInteractionEnabled = false
